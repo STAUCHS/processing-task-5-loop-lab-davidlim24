@@ -130,7 +130,7 @@ public class Sketch extends PApplet {
     int intX = 0;
     int intY = 0;
 
-    for (int intRow = 0; intRow < 30; intRow++) {
+    for (int intRow = 0; intRow < 31; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
         intX = 903 + intRow * 10;  
         intY = 300 + 3 + intColumn * 10; 
@@ -149,31 +149,79 @@ public class Sketch extends PApplet {
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5() {
+    
     int intX = 0;
     int intY = 0;
 
-    for (int intRow = 0; intRow < 30; intRow++) {
-      for (int intColumn = 0; intColumn < 70; intColumn++) {
-        intX = 3 + intRow * 10;  
-        intY = 0 + 3 + intColumn * 10; 
+    for (int intRow = 29 ; intRow >= 1; intRow--) {
+      for (int intColumn = intRow; intColumn < 30; intColumn++) {
+        intX = 0 + intRow * 10 ;  
+        intY = 3 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(303-intX, intY, 5, 5);
+      }
+    }
+  }
+
+  public void draw_section6() {
+   
+    int intX = 0;
+    int intY = 0;
+
+    for (int intRow = 29 ; intRow >= 1; intRow--) {
+      for (int intColumn = intRow; intColumn < 30; intColumn++) {
+        intX = 294 + intRow * 10 ;  
+        intY = 3 + intColumn * 10; 
 
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
       }
     }
-  }
-
-  public void draw_section6() {
-
+    
   }
 
   public void draw_section7() {
+    
+    int intX = 0;
+    int intY = 0;
+    int intSlant = 0;
 
-  }
+    for (int intRow = 0; intRow <= 29; intRow++) {
+     intSlant++;
+      for (int intColumn = 0; intColumn < intSlant; intColumn++) {
+        intX = 3 + intRow * 10;  
+        intY = 0 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(896-intX, intY, 5, 5);
+      }
+    }
+  
+}
+  
   
   public void draw_section8() {
+   
+    int intX = 0;
+    int intY = 0;
 
-  }
+    for (int intRow = 0; intRow <= 29; intRow++) {
+     
+      for (int intColumn = 0; intColumn <= intRow; intColumn++) {
+        intX = 3 + 900 + intRow * 10;  
+        intY = 0 + intColumn * 10; 
 
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
+  
 }
+}
+   
+

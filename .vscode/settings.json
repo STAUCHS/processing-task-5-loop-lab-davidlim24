@@ -8,5 +8,6 @@
         "exclude": [
             "lib/repl_core.jar"
         ]
-    }
+    },
+    "java.debug.settings.onBuildFailureProceed": true
 }
